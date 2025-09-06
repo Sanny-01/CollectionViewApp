@@ -52,16 +52,16 @@ struct CollectionViewAppForInterviewViewModelTests {
     }
     
     @Test
-      func shouldShowErrorWhenFetchImageCallFails() async throws {
-          useCase.fetchImagesPageSolClosure = { _, _ in
-              throw CancellationError()
-          }
-          
-          await sut.refresh()
-          
-          #expect(sut.state == .error(CancellationError().localizedDescription))
-          #expect(sut.items.isEmpty)
-      }
+    func shouldShowErrorWhenFetchImageCallFails() async throws {
+        useCase.fetchImagesPageSolClosure = { _, _ in
+            throw CancellationError()
+        }
+        
+        await sut.refresh()
+        
+        #expect(sut.state == .error(CancellationError().localizedDescription))
+        #expect(sut.items.isEmpty)
+    }
     
     @Test
     func shouldNavigateToDetailsWithCorrectDataWhenUserTapsImage() async throws {

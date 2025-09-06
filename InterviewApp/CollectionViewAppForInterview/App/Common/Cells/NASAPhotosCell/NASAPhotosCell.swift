@@ -81,15 +81,11 @@ final class PhotoCell: UICollectionViewCell {
         contentView.backgroundColor = .secondarySystemBackground
         contentView.layer.cornerRadius = 16
         contentView.layer.masksToBounds = true
-
-        // Info stack
         infoStack.addArrangedSubview(titleLabel)
         infoStack.addArrangedSubview(subtitleLabel)
 
-        // Container stack
         containerStack.addArrangedSubview(imageView)
         containerStack.addArrangedSubview(infoStack)
-
         contentView.addSubview(containerStack)
 
         NSLayoutConstraint.activate([

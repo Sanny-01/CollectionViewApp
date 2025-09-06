@@ -107,7 +107,6 @@ class ImageListViewController: UIViewController {
 
     
     private static func layout() -> UICollectionViewLayout {
-        // Each item will take 50% of the width, minus spacing
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(0.5),
             heightDimension: .estimated(280)
